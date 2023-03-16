@@ -1,0 +1,7 @@
+<div class="flex flex-col h-[100vh] bg-neutral-50">
+  <app-filter (termChanged)="changeTerms($event)" [term]="searchTerm"></app-filter>
+  <ng-container *ngIf="items">
+    <app-list [items]="filteredItems" class="bg-gray-700 flex-1" >
+    </app-list>
+  </ng-container>
+</div>
